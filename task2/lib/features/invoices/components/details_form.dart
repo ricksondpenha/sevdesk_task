@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sevdesk_task/core/widgets/text_input.dart';
 
+import '../../../core/widgets/date_input.dart';
+
 class DetailsForm extends StatelessWidget {
   const DetailsForm({super.key});
 
@@ -21,8 +23,8 @@ class DetailsForm extends StatelessWidget {
             children: [
               TextInput(prefix: 'Invoice no.'),
               TextInput(prefix: 'Subject'),
-              TextInput(prefix: 'Invoice date'),
-              TextInput(prefix: 'Delivery date'),
+              DateInput(prefix: 'Invoice date'),
+              DateInput(prefix: 'Delivery date'),
               TextInput(prefix: 'Time to pay'),
               TextInput(prefix: 'Reference'),
             ],

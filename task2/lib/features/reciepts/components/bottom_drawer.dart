@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:sevdesk_task/features/invoices/components/details_form.dart';
 
-class BottomDrawer extends StatefulWidget {
-  const BottomDrawer({super.key});
+class BottomDrawer extends StatelessWidget {
+  final List<Widget> children;
+  const BottomDrawer({super.key, required this.children});
 
-  @override
-  State<BottomDrawer> createState() => _BottomDrawerState();
-}
-
-class _BottomDrawerState extends State<BottomDrawer> {
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
       initialChildSize: 0.4,
-      maxChildSize: 0.9,
+      maxChildSize: 0.8,
       minChildSize: 0.2,
       expand: true,
       snap: true,
@@ -27,12 +23,12 @@ class _BottomDrawerState extends State<BottomDrawer> {
               topRight: Radius.circular(12),
             ),
           ),
-          child: CustomScrollView(
+          child: ListView(
+            physics: const ClampingScrollPhysics(),
             controller: scrollController,
-            slivers: [
-              SliverToBoxAdapter(
-                  child: Align(
-                alignment: Alignment.center,
+            padding: EdgeInsets.zero,
+            children: [
+              Center(
                 child: Container(
                   margin: const EdgeInsets.symmetric(vertical: 12),
                   height: 8,
@@ -41,60 +37,8 @@ class _BottomDrawerState extends State<BottomDrawer> {
                       color: Colors.grey[800],
                       borderRadius: BorderRadius.circular(100)),
                 ),
-              )),
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Rechnungsinformationen eintragen',
-                        style: Theme.of(context).textTheme.titleLarge,
-                      ),
-                      Text(
-                        'Du kanst die rechnung im Hintergrunf vergrößen und bewegen.',
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
-                    ],
-                  ),
-                ),
               ),
-              SliverList.list(
-                children: const [DetailsForm()],
-              ),
-              SliverToBoxAdapter(
-                child: Column(
-                  children: [
-                    ElevatedButton(
-                      style:
-                          ElevatedButton.styleFrom(backgroundColor: Colors.red),
-                      onPressed: () {},
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: const Text('Delete Draft'),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    ElevatedButton(
-                        onPressed: () {},
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: const Text('Complete'),
-                            ),
-                          ],
-                        ))
-                  ],
-                ),
-              )
+              ...children
             ],
           ),
         );

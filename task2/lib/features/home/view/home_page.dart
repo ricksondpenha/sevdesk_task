@@ -10,14 +10,17 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool showFab = MediaQuery.of(context).viewInsets.bottom == 0.0;
     return Scaffold(
       body: page,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          context.pushNamed(CreateInvoicePage.routeName);
-        },
-        child: const Icon(Icons.add),
-      ),
+      floatingActionButton: showFab
+          ? FloatingActionButton(
+              onPressed: () {
+                context.pushNamed(CreateInvoicePage.routeName);
+              },
+              child: const Icon(Icons.add),
+            )
+          : null,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: const BottomBar(),
       extendBody: true,

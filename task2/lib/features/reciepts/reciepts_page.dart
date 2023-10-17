@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../invoices/components/details_form.dart';
 import 'components/bottom_drawer.dart';
 
 class RecieptsPage extends StatelessWidget {
@@ -21,7 +22,63 @@ class RecieptsPage extends StatelessWidget {
                         ColorFilter.mode(Colors.black26, BlendMode.darken),
                     image: AssetImage('assets/img/invoice_scan.png'))),
           ),
-          const BottomDrawer(),
+          BottomDrawer(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Rechnungsinformationen eintragen',
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    Text(
+                      'Du kanst die rechnung im Hintergrunf vergrößen und bewegen.',
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                  ],
+                ),
+              ),
+              DetailsForm(),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  children: [
+                    ElevatedButton(
+                      style:
+                          ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                      onPressed: () {},
+                      child: const Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(16.0),
+                            child: Text('Delete Draft'),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    ElevatedButton(
+                        onPressed: () {},
+                        child: const Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.all(16.0),
+                              child: Text('Complete'),
+                            ),
+                          ],
+                        )),
+                    const SizedBox(
+                      height: 120,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

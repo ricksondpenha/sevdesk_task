@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sevdesk_task/features/invoices/components/invoices_list.dart';
 import 'package:sevdesk_task/features/invoices/create_invoice_page.dart';
-import 'package:sevdesk_task/services/navigation_service.dart';
 
 class InvoicesPage extends StatelessWidget {
   const InvoicesPage({super.key});
