@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sevdesk_task/core/widgets/text_input.dart';
 
-import '../../../core/widgets/date_input.dart';
+import '../../../../core/widgets/date_input.dart';
 
 class DetailsForm extends StatelessWidget {
   const DetailsForm({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sevdesk_task/features/invoices/create_invoice_page.dart';
+import '../create_invoice_page.dart';
 
 class EmptyInvoices extends StatelessWidget {
   const EmptyInvoices({super.key});

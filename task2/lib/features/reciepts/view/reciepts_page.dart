@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../invoices/components/details_form.dart';
+import '../../invoices/view/components/details_form.dart';
 import 'components/bottom_drawer.dart';
 
 class RecieptsPage extends StatelessWidget {
@@ -40,7 +40,7 @@ class RecieptsPage extends StatelessWidget {
                   ],
                 ),
               ),
-              DetailsForm(),
+              const DetailsForm(),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(

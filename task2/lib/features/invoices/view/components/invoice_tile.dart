@@ -2,7 +2,7 @@ import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../model/invoice.dart';
+import '../../model/invoice.dart';
 
 class InvoiceTile extends StatelessWidget {
   const InvoiceTile({

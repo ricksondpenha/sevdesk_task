@@ -1,9 +1,9 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:sevdesk_task/features/invoices/components/invoice_tile.dart';
+import 'package:sevdesk_task/features/invoices/view/components/invoice_tile.dart';
 import 'package:sevdesk_task/features/invoices/model/invoice.dart';
-import 'package:sevdesk_task/features/invoices/state/invoices_list_state.dart';
+import 'package:sevdesk_task/features/invoices/view/state/invoices_list_state.dart';
 
 class InvoicesList extends ConsumerWidget {
   const InvoicesList({super.key});

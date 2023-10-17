@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sevdesk_task/features/invoices/components/choose_contact_tile.dart';
-import 'package:sevdesk_task/features/invoices/components/details_form.dart';
-import 'package:sevdesk_task/features/invoices/components/finish_button.dart';
-import 'package:sevdesk_task/features/invoices/components/text_section.dart';
+import 'package:sevdesk_task/features/invoices/view/components/choose_contact_tile.dart';
+import 'package:sevdesk_task/features/invoices/view/components/details_form.dart';
+import 'package:sevdesk_task/features/invoices/view/components/finish_button.dart';
+import 'package:sevdesk_task/features/invoices/view/components/text_section.dart';
 
 class CreateInvoicePage extends StatelessWidget {
   const CreateInvoicePage({super.key});

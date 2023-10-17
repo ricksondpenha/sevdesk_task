@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sevdesk_task/features/home/view/components/bottom_bar.dart';
-import 'package:sevdesk_task/features/invoices/create_invoice_page.dart';
+
+import 'components/bottom_bar.dart';
+import '../../invoices/view/create_invoice_page.dart';
 
 class HomePage extends StatelessWidget {
   final Widget page;

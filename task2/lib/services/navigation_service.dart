@@ -1,14 +1,14 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sevdesk_task/features/invoices/create_invoice_page.dart';
-import 'package:sevdesk_task/features/reciepts/reciepts_page.dart';
-import 'package:sevdesk_task/features/settings/settings_page.dart';
 
 import '../core/widgets/unknown.page.dart';
 import '../features/dashboard/dashboard_page.dart';
 import '../features/home/view/home_page.dart';
-import '../features/invoices/invoices_page.dart';
+import '../features/invoices/view/create_invoice_page.dart';
+import '../features/invoices/view/invoices_page.dart';
+import '../features/reciepts/view/reciepts_page.dart';
+import '../features/settings/settings_page.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 final shellNavigatorKey = GlobalKey<NavigatorState>();

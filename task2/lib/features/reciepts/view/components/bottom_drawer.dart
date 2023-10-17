@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sevdesk_task/features/invoices/components/details_form.dart';
 
 class BottomDrawer extends StatelessWidget {
   final List<Widget> children;
